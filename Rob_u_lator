@@ -1,0 +1,77 @@
+<html>
+<head><title>calculator</title>
+<style>
+#a,#b{background-color:yellow}
+#k{margin:0px;width:90%;height:50%}
+#r{position:absolute;left:32%;padding:6px;top:3%}
+
+#m{box-shadow:5px 4px 6px 6px;width:40%;height:50%;position:absolute;top:20%;left:30%;}
+</style>
+
+
+<script>
+var t;t="";
+
+function d()
+{
+t=0;
+document.getElementById("a").innerHTML=t;
+}
+
+
+function c(a)
+{
+t+=a;
+document.getElementById("a").innerHTML=t;
+document.getElementById("a").style.fontSize="200%";
+}
+
+function res()
+{
+var tt=eval(t);
+document.getElementById("a").innerHTML=tt;
+t=tt;
+document.getElementById("a").style.fontSize="200%";
+}
+
+
+</script>
+</head>
+
+<body align="center" style="background-color:purple">
+<div id="m" align="center" style="background-color:black">
+<div id="a" style="width:70%;height:10%" ></div>
+<div id="b" style="width:50%;height:10%" ></div><br>
+
+<div id="k" align="center">
+<input type="button" value="1" onclick="c(1)" style="width:20%;height:20%;border-radius:70%">
+<input type="button" value="2" onclick="c(2)" style="width:20%;height:20%;border-radius:70%">
+<input type="button" value="3" onclick="c(3)" style="width:20%;height:20%;border-radius:70%">
+<input type="button" value="+" onclick="c('+')" style="width:20%;height:20%;border-radius:70%;background-color:red" ><br><br><br>
+
+<input type="button" value="4" onclick="c(4)" style="width:20%;height:20%;border-radius:70%">
+<input type="button"value="5" onclick="c(5)" style="width:20%;border-radius:70%;height:20%">
+<input type="button"value="6" onclick="c(6)" style="width:20%;border-radius:70%;height:20%">
+<input type="button"value="-" onclick="c('-')" style="width:20%;border-radius:70%;height:20%;background-color:red" bgcolor="yellow"><br><br><br>
+
+<input type="button" value="7" onclick="c(7)" style="width:20%;border-radius:70%;height:20%">
+<input type="button"value="8" onclick="c(8)" style="width:20%;border-radius:70%;height:20%">
+<input type="button"value="9" onclick="c(9)" style="width:20%;border-radius:70%;height:20%">
+<input type="button" value="*" onclick="c('*')" style="width:20%;border-radius:70%;height:20%;background-color:red" bgcolor="yellow"><br><br><br>
+
+<input type="button" value="0" onclick="c('0')" style="width:20%;border-radius:70%;height:20%">
+
+
+<input type="button" value="=" onclick="res()" style="width:20%;border-radius:70%;background-color:red;height:20%" bgcolor="yellow">
+<input type="button" value="C" onclick="d()" style="width:20%;border-radius:100%;background-color:red;height:20%">
+
+<input type="button" value="/" onclick="c('/')" style="width:20%;border-radius:100%;background-color:red;height:20%">
+
+</div>
+</div>
+
+
+<div style="border-radius:40%;font-Size:300%;background-color:white;width:35%;height:10%" id="r">ROB-U-LATOR</div>
+</body>
+
+</html>
